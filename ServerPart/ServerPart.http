@@ -1,0 +1,7 @@
+@ServerPart_HostAddress = http://localhost:5218
+
+
+GET {{ServerPart_HostAddress}}/create/
+Accept: application/json
+
+###
