@@ -2,6 +2,7 @@ using Bogus;
 using GraphQL;
 using ServerPart.Data;
 using ServerPart.GraphQL;
+using ServerPart.GraphQL.DataLoaders;
 using ServerPart.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,13 +28,18 @@ builder.AddSqlServerDbContext<AppDbContext>(
     //});
 });
 
+builder.Services.AddMemoryCache();
+
+builder.Services.AddScoped<TeacherDataLoader>();
+builder.Services.AddScoped<StudentsDataLoader>();
 builder.Services.AddSingleton<UniversityQuery>();
 builder.Services.AddSingleton<UniversityMutation>();
 builder.Services.AddGraphQL(builder =>
     {
         builder
         .AddSchema<AppSchema>()
-        .AddSystemTextJson();
+        .AddSystemTextJson()
+        .AddDataLoader();
     });
 
 

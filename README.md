@@ -35,3 +35,14 @@ Course plan is taken by `scheduler(s)`.
 ### Mutation
 
 Here you can update Course's Description and add a new teacher.
+
+## Data Loader
+
+Allow to batch requests.
+eg. we have a request of Courses Plans. Each of them have TeacherId that should resolve and return a Teacher.
+</br>
+Instead of making a request for each of Id, DataLoader firstly get all of those Id's, then pass them as List for resolving (via event?).
+
+I implemented "DI" resolver that inherit `DataLoaderBase` and should be implemented for each "Resolver" type.
+In there we override the `FetchAsync` method with `IEnumerable<DataLoaderPair<key, Value>>` parameter.
+It should be registered as "Scoped" service.
