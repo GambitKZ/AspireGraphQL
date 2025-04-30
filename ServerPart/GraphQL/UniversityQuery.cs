@@ -91,8 +91,8 @@ namespace ServerPart.GraphQL
                 {
                     return dbContext.CoursePlans
                         .Include(n => n.Course)
-                        .Include(n => n.Teacher)
-                        .Include(n => n.Students)
+                        //.Include(n => n.Teacher)
+                        //.Include(n => n.Students)
                         .ToList();
                 });
 
@@ -106,8 +106,8 @@ namespace ServerPart.GraphQL
                     var id = context.GetArgument<int>("id");
                     return dbContext.CoursePlans
                         .Include(n => n.Course)
-                        .Include(n => n.Teacher)
-                        .Include(n => n.Students)
+                        //.Include(n => n.Teacher)
+                        //.Include(n => n.Students)
                         .FirstOrDefault(x => x.Id.Equals(id));
                 });
         }
