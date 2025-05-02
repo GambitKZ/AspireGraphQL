@@ -3,6 +3,7 @@ using GraphQL;
 using ServerPart.Data;
 using ServerPart.GraphQL;
 using ServerPart.GraphQL.DataLoaders;
+using ServerPart.GraphQL.Subscription;
 using ServerPart.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,10 +31,13 @@ builder.AddSqlServerDbContext<AppDbContext>(
 
 builder.Services.AddMemoryCache();
 
+builder.Services.AddSingleton<INotificationEventService, NotificationEventService>();
+
 builder.Services.AddScoped<TeacherDataLoader>();
 builder.Services.AddScoped<StudentsDataLoader>();
 builder.Services.AddSingleton<UniversityQuery>();
 builder.Services.AddSingleton<UniversityMutation>();
+builder.Services.AddSingleton<UniversitySubscription>();
 builder.Services.AddGraphQL(builder =>
     {
         builder
@@ -60,6 +64,7 @@ if (app.Environment.IsDevelopment())
 
 // Required "GraphQL.Server.Transports.AspNetCore" to work.
 // Otherwise you need to write your own controller
+app.UseWebSockets();
 app.UseGraphQL("/graphql");
 
 // GraphQL UI with path "/ui/graphiql"
@@ -147,5 +152,3 @@ app.MapGet("/create", (AppDbContext context) =>
 //});
 
 app.Run();
-
-

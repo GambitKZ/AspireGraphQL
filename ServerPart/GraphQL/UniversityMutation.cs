@@ -2,6 +2,7 @@
 using GraphQL.MicrosoftDI;
 using GraphQL.Types;
 using ServerPart.Data;
+using ServerPart.GraphQL.Subscription;
 using ServerPart.GraphQL.Types;
 using ServerPart.Models;
 
@@ -16,13 +17,22 @@ public class UniversityMutation : ObjectGraphType
             .Argument<StringGraphType>("description")
             .Resolve()
             .WithService<AppDbContext>()
-            .ResolveAsync(async (context, dbContext) =>
+            .WithService<INotificationEventService>()
+            .ResolveAsync(async (context, dbContext, eventService) =>
             {
                 var id = context.GetArgument<Guid>("id");
                 var course = dbContext.Courses.FirstOrDefault(x => x.Id.Equals(id));
                 course.Description = context.GetArgument<string>("description");
 
                 await dbContext.SaveChangesAsync();
+
+                var message = new Message()
+                {
+                    Id = id,
+                    Name = "Description was changed",
+                };
+                eventService.CourseUpdate(message);
+
                 return course;
             });
 
