@@ -1,4 +1,4 @@
-﻿namespace ServerPart.Models;
+﻿namespace AspireGraphQL.ServiceDefaults.Models;
 
 public class CoursePlan
 {

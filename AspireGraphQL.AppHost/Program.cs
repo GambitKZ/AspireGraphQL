@@ -8,4 +8,12 @@ builder.AddProject<Projects.ServerPart>("serverpart")
     .WithReference(db)
     .WaitFor(db);
 
+builder.AddProject<Projects.ServerPart_HotChocolate>("serverpart-hotchocolate")
+    .WithReference(db)
+    .WaitFor(db);
+
+builder.AddProject<Projects.ServicePart_HotChocolate_ImplementationFirst>("servicepart-hotchocolate-implementationfirst")
+    .WithReference(db)
+    .WaitFor(db);
+
 builder.Build().Run();

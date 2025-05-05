@@ -1,9 +1,9 @@
+using AspireGraphQL.ServiceDefaults.Data;
+using AspireGraphQL.ServiceDefaults.Models;
 using Bogus;
 using GraphQL;
-using ServerPart.Data;
 using ServerPart.GraphQL;
 using ServerPart.GraphQL.DataLoaders;
-using ServerPart.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

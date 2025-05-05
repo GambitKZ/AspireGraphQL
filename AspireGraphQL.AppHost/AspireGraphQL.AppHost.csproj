@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ServerPart.HotChocolate\ServerPart.HotChocolate.csproj" />
     <ProjectReference Include="..\ServerPart\ServerPart.csproj" />
+    <ProjectReference Include="..\ServicePart.HotChocolate.ImplementationFirst\ServicePart.HotChocolate.ImplementationFirst.csproj" />
   </ItemGroup>
 
 </Project>

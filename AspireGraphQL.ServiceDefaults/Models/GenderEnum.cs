@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using GraphQL.Types;
 
-namespace ServerPart.Models;
+namespace AspireGraphQL.ServiceDefaults.Models;
 
 [Description("Genders")]
 [PascalCase]

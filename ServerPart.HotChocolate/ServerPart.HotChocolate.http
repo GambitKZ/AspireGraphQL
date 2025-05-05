@@ -1,0 +1,6 @@
+@ServerPart.HotChocolate_HostAddress = http://localhost:5165
+
+GET {{ServerPart.HotChocolate_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

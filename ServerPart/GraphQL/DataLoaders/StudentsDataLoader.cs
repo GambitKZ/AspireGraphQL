@@ -1,8 +1,8 @@
-﻿using GraphQL.DataLoader;
+﻿using AspireGraphQL.ServiceDefaults.Data;
+using AspireGraphQL.ServiceDefaults.Models;
+using GraphQL.DataLoader;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using ServerPart.Data;
-using ServerPart.Models;
 
 namespace ServerPart.GraphQL.DataLoaders;
 

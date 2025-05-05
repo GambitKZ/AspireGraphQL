@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ServerPart.Models;
+﻿using AspireGraphQL.ServiceDefaults.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace ServerPart.Data;
+namespace AspireGraphQL.ServiceDefaults.Data;
 
 public class AppDbContext : DbContext
 {
