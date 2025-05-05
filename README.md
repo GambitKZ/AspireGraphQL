@@ -1,6 +1,6 @@
 # Introduction
 
-Attempt to implement the GraphQL with [GraphQL.NET](https://graphql-dotnet.github.io/).
+Attempt to implement the GraphQL with [GraphQL.NET](https://graphql-dotnet.github.io/) and [HotChocolate](https://chillicream.com/docs/hotchocolate/v15).
 
 To be honest, the documentation is too misleading.
 So it was a pain to work with.
@@ -31,10 +31,13 @@ And pass Name in each, except "Course Plan".
 You can take each entity by Id, but use single name (eg. `teacher` vs. `teachers`).
 </br>
 Course plan is taken by `scheduler(s)`.
+Linked parameters like `teacherId/courseId/etc` will be hidden from Client.
 
 ### Mutation
 
-Here you can update Course's Description and add a new teacher.
+Implemented:
+1. Update Course Description
+2. Add new Teacher. Teacher as Input type without ID, as it will be added on Server.
 
 ## Data Loader
 
@@ -43,6 +46,4 @@ eg. we have a request of Courses Plans. Each of them have TeacherId that should 
 </br>
 Instead of making a request for each of Id, DataLoader firstly get all of those Id's, then pass them as List for resolving (via event?).
 
-I implemented "DI" resolver that inherit `DataLoaderBase` and should be implemented for each "Resolver" type.
-In there we override the `FetchAsync` method with `IEnumerable<DataLoaderPair<key, Value>>` parameter.
-It should be registered as "Scoped" service.
+Students under the `scheduler` use `Data Loader`.
