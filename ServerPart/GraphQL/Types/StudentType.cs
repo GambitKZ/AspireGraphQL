@@ -1,5 +1,5 @@
-﻿using GraphQL.Types;
-using ServerPart.Models;
+﻿using AspireGraphQL.ServiceDefaults.Models;
+using GraphQL.Types;
 
 namespace ServerPart.GraphQL.Types
 {

@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireGraphQL.ServiceDefaul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerPart", "ServerPart\ServerPart.csproj", "{1E8353F2-A4F7-8DF3-7FB1-5BD56C7C2836}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerPart.HotChocolate", "ServerPart.HotChocolate\ServerPart.HotChocolate.csproj", "{23028C14-FCD7-1BFC-2D47-D7E09AC8DE7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicePart.HotChocolate.ImplementationFirst", "ServicePart.HotChocolate.ImplementationFirst\ServicePart.HotChocolate.ImplementationFirst.csproj", "{7B6822EF-46DD-8E1C-17DE-4270BD11E77F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{1E8353F2-A4F7-8DF3-7FB1-5BD56C7C2836}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E8353F2-A4F7-8DF3-7FB1-5BD56C7C2836}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E8353F2-A4F7-8DF3-7FB1-5BD56C7C2836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23028C14-FCD7-1BFC-2D47-D7E09AC8DE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23028C14-FCD7-1BFC-2D47-D7E09AC8DE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23028C14-FCD7-1BFC-2D47-D7E09AC8DE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23028C14-FCD7-1BFC-2D47-D7E09AC8DE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B6822EF-46DD-8E1C-17DE-4270BD11E77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6822EF-46DD-8E1C-17DE-4270BD11E77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6822EF-46DD-8E1C-17DE-4270BD11E77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6822EF-46DD-8E1C-17DE-4270BD11E77F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
-﻿using GraphQL.MicrosoftDI;
+﻿using AspireGraphQL.ServiceDefaults.Models;
+using GraphQL.MicrosoftDI;
 using GraphQL.Types;
 using ServerPart.GraphQL.DataLoaders;
-using ServerPart.Models;
 
 namespace ServerPart.GraphQL.Types;
 

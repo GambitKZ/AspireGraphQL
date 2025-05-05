@@ -1,9 +1,9 @@
-﻿using GraphQL;
+﻿using AspireGraphQL.ServiceDefaults.Data;
+using GraphQL;
 using GraphQL.MicrosoftDI;
 using GraphQL.Types;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using ServerPart.Data;
 using ServerPart.GraphQL.Types;
 
 namespace ServerPart.GraphQL
